@@ -1,0 +1,34 @@
+{
+  "name": "bert-tokenizer",
+  "version": "1.0.0",
+  "description": "A simple tool to generate bert tokens and input features",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && jasmine-ts-mem-fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tedhtchang/bert-tokenizer.git"
+  },
+  "keywords": [
+    "tokenizer",
+    "bert",
+    "wordpiece"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tedhtchang/bert-tokenizer/issues"
+  },
+  "homepage": "https://github.com/tedhtchang/bert-tokenizer#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jasmine": "^3.5.7",
+    "@types/node": "^12.12.17",
+    "jasmine": "^3.5.0",
+    "jasmine-ts-mem-fix": "^0.3.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.5.3"
+  }
+}
