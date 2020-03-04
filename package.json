@@ -17,7 +17,7 @@
     "wordpiece"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "apache-2.0",
   "bugs": {
     "url": "https://github.com/tedhtchang/bert-tokenizer/issues"
   },
