@@ -7,7 +7,7 @@ A simple tool to generate bert tokens and input features
 ## Usage
 
 ```
-const BertTokenizer = require('bert-tokenizer');
+const {BertTokenizer} = require('bert-tokenizer');
 
 const posText = "i like strawberries";
 const posTokenids = [ 1045, 2066, 13137, 20968 ];
