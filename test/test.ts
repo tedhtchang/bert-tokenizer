@@ -1,5 +1,5 @@
 /* globals jasmine, describe, it, expect, tf */
-import BertTokenizer from '../src/index';
+import {BertTokenizer} from '../src/index';
 
 const posText = "i like strawberries";
 const posTokenids = [ 1045, 2066, 13137, 20968 ];
