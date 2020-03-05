@@ -1,4 +1,4 @@
-const BertTokenizer = require('bert-tokenizer');
+const {BertTokenizer} = require('bert-tokenizer');
 const posText = "i like strawberries";
 const posTokenids = [ 1045, 2066, 13137, 20968 ];
 const vocabUrl = 'node_modules/bert-tokenizer/assets/vocab.json'
