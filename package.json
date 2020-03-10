@@ -1,6 +1,6 @@
 {
   "name": "bert-tokenizer",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "A simple tool to generate bert tokens and input features",
   "main": "dist/index.js",
   "scripts": {
