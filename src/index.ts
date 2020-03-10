@@ -1,4 +1,6 @@
+import {join} from 'path';
 import WordPieceTokenizer from './wordpiecetokenizer';
+const DEFAUT_VOCAB_PATH = join(__dirname, '..', 'assets', 'vocab.json');
 
 function isPunctuation(cp: number):boolean {
   // Checks a cp is a punctuation character or not.
@@ -86,7 +88,7 @@ export class BertTokenizer{
   clsId: number;
   sepId: number;
 
-  constructor(pathToVocabulary: string, doLowerCase: boolean = true){
+  constructor(pathToVocabulary: string = DEFAUT_VOCAB_PATH, doLowerCase: boolean = true){
     this.tokenizer = new WordPieceTokenizer();
     this.tokenizer.load(pathToVocabulary);
     this.doLowerCase = doLowerCase;
