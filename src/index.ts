@@ -87,11 +87,15 @@ export class BertTokenizer{
   tokenizer: WordPieceTokenizer;
   clsId: number;
   sepId: number;
+  maxSeqLength: number;
 
-  constructor(pathToVocabulary: string = DEFAUT_VOCAB_PATH, doLowerCase: boolean = true){
+  constructor(pathToVocabulary: string = DEFAUT_VOCAB_PATH,
+              doLowerCase: boolean = true,
+              maxSeqLength: number = 128){
     this.tokenizer = new WordPieceTokenizer();
     this.tokenizer.load(pathToVocabulary);
     this.doLowerCase = doLowerCase;
+    this.maxSeqLength = maxSeqLength;
     this.clsId = this.convertTokensToId('[CLS]')[0];
     this.sepId = this.convertTokensToId('[SEP]')[0];
   }
@@ -125,7 +129,6 @@ export class BertTokenizer{
     let inputMask: number[] = [];
     let segmentIds: number[] = [];
     const tokenIds = this.tokenize(text);
-    const maxSeqLength = 128;
 
     inputIds.push(this.clsId)
     inputMask.push(1);
@@ -143,7 +146,7 @@ export class BertTokenizer{
 
     // pad with 0 up to the maxSeqLength
     const numTokens = inputIds.length
-    for (let i = 0; i < maxSeqLength - numTokens; i++){
+    for (let i = 0; i < this.maxSeqLength - numTokens; i++){
       inputIds.push(0);
       inputMask.push(0);
       segmentIds.push(0);
